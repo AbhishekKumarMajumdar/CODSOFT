@@ -1,30 +1,32 @@
 #include <iostream>
-#include <time.h>
+#include<time.h>
 using namespace std;
 
 int main(){
     srand(time(0));
   int result = rand() % 100 + 1;
- 
-    int user;
-    cout<<"Gusse the Number ( 0-100 ) \n";
-    int count = 0;
-
-while(true){
+  int user;
+  cout<<"Walcome to the Gusse this number\n\n";
+  cout<<"Gusse the number ...\n";
+  
+   int count = 0;
+   while(true){
     cin>>user;
-    if( user != result){
-        if(user > result ){
-            cout<<"Your gusse is too high\n";
-        }else{
-            cout<<"Your gusse is too low \n";
-        }
+ if(user != result){
+    if(user > result ){
+        cout<<"You are gusse too High!\n";
     }else{
-        cout<<" Your gusse is right . YOU WIN \n";
-        cout<<count;
-        break;
+        cout<<"You are gusse too Low! \n";
     }
-    count++;
-
-}
+  }
+  else{
+    cout<<"Congratulation ! YOU WON THE MATCH\n\n";
+    cout<< "You have found the correct number "<< result << " in "<< count<< " attempts.";
+    break;
+  }
+  count++;
+   
+   }
+ 
 return 0;
 }
